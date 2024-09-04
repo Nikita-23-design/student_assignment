@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function student_assignment_install() {
+  // Create 'student' role.
+  if (!\Drupal\user\Entity\Role::load('student')) {
+    $role = \Drupal\user\Entity\Role::create(['id' => 'student', 'label' => 'Student']);
+    $role->grantPermission('access content');
+    $role->save();
+  }
+
+  // Create 'teacher' role.
+  if (!\Drupal\user\Entity\Role::load('teacher')) {
+    $role = \Drupal\user\Entity\Role::create(['id' => 'teacher', 'label' => 'Teacher']);
+    $role->grantPermission('access content');
+    $role->save();
+  }
+}
+

@@ -1,0 +1,36 @@
+student_assignment.manage_extensions:
+  path: '/teacher/manage-extensions'
+  defaults:
+    _form: '\Drupal\student_assignment\Form\ManageExtensionsForm'
+    _title: 'Manage Allowed Extensions'
+  requirements:
+    #_role: 'teacher'
+    _permission: 'access content'
+
+student_assignment.view_submissions:
+  path: '/teacher/view-submissions'
+  defaults:
+    _controller: '\Drupal\student_assignment\Controller\TeacherController::viewSubmissions'
+    _title: 'View Student Submissions'
+  requirements:
+    #_role: 'teacher'
+    _permission: 'access content'
+
+student_assignment.submit_marks:
+  path: '/teacher/submit-marks/{student_id}'
+  defaults:
+    _form: '\Drupal\student_assignment\Form\SubmitMarksForm'
+    _title: 'Submit Marks'
+  requirements:
+    #_role: 'teacher'
+    _permission: 'access content'
+
+student_assignment.submit_assignment:
+  path: '/student/submit-assignment'
+  defaults:
+    _form: '\Drupal\student_assignment\Form\AssignmentForm'
+    _title: 'Submit Assignment'
+  requirements:
+    #_role: 'student'
+    _permission: 'access content'
+

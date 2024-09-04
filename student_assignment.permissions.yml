@@ -1,0 +1,10 @@
+manage file extensions:
+  title: 'Manage allowed file extensions for assignments'
+  description: 'Allow teachers to manage allowed file extensions for student submissions.'
+  restrict access: true
+
+view student submissions:
+  title: 'View student submissions'
+  description: 'Allow teachers to view student submissions and submit marks.'
+  restrict access: true
+

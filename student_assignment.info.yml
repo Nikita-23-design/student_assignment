@@ -1,0 +1,10 @@
+name: 'Student Assignment'
+type: module
+description: 'A custom module for handling student assignments and teacher grading.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:file
+  - drupal:node
+  - drupal:user
+
